@@ -11,7 +11,7 @@ public class BankAccount {
         if (amount > 0) {
             balance += amount;
         } else {
-            System.out.println("Amount of money can't be less than zero");
+            System.out.println("Deposit amount must be positive!");
         }
     }
 
