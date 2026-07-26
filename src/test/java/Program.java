@@ -72,7 +72,7 @@ public class Program {
         user.setFullName(scanner.nextLine());
         System.out.println("Create the pin to safety use your data");
         user.setPin(scanner.nextLine());
-        System.out.println("Account for " + user.getFullName() + " is created!\n The account number = " + user.getAccountNumber());
+        System.out.println("Account for " + user.getFullName() + " is created!\nThe account number = " + user.getAccountNumber() + "\n");
         return;
     }
 }
