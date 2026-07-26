@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class Program {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Welcome to Java Bank ATM!");
         BankAccount shortName = new BankAccount();
         createAccount(shortName, scanner);
         while (true) {
@@ -42,7 +43,8 @@ public class Program {
     public static boolean verifyPin(BankAccount user, Scanner scanner) {
         boolean result;
         while (true) {
-            System.out.println("Enter the pin to get access");
+
+            System.out.println("Please enter your PIN code to get access:");
 
             if (user.checkPin(scanner.nextLine())) {
                 result = true;
