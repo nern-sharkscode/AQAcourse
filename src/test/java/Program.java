@@ -43,7 +43,7 @@ public class Program {
     public static boolean verifyPin(BankAccount user, Scanner scanner) {
         boolean result;
         while (true) {
-            System.out.println("Enter the pin");
+            System.out.println("Please enter your PIN code:");
 
             if (user.checkPin(scanner.nextLine())) {
                 result = true;
