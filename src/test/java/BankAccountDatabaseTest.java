@@ -26,26 +26,26 @@ public class BankAccountDatabaseTest {
 
     @Test(groups = "database")
     public void oneAccountDatabaseSizeTest(){
-        db.addAccount(testAccount);
+        TestDataHelper.addAccountToDB(testAccount, db);
         Assert.assertEquals(db.getDatabaseSize(), 1, "Database size is not equal 1");
     }
 
     @Test(groups = "database")
     public void databaseHasAccountTest(){
-        db.addAccount(testAccount);
+        TestDataHelper.addAccountToDB(testAccount, db);
         Assert.assertTrue(db.containsAccount(testAccount), "Database doesn't have that account");
     }
 
     @Test(groups = "database")
     public void getDatabaseSizeAfterRemoveAccountTest(){
-        db.addAccount(testAccount);
+        TestDataHelper.addAccountToDB(testAccount, db);
         db.removeAccount(testAccount);
         Assert.assertEquals(db.getDatabaseSize(), 0, "Account wasn't removed from Database");
     }
 
     @Test(groups = "database")
     public void databaseNotContainsRemovedAccountTest(){
-        db.addAccount(testAccount);
+        TestDataHelper.addAccountToDB(testAccount, db);
         db.removeAccount(testAccount);
         Assert.assertFalse(db.containsAccount(testAccount), "Database still contain account");
     }

@@ -10,7 +10,7 @@ public class BankAccountTest {
     @BeforeMethod
     public void setUp(){
         testAccount = new BankAccount();
-        testAccount.setPin("7777");
+        testAccount.setPin(TestDataHelper.generateRandomPin());
     }
 
     @AfterMethod
